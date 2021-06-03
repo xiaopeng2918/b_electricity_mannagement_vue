@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    App
+    <!-- 路由页面跳转占位符 -->
+    <router-view></router-view>
   </div>
 </template>
 

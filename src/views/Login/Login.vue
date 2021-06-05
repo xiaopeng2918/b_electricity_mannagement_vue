@@ -32,7 +32,7 @@ export default {
       // 登录页表单绑定数据对象
       loginForm: {
         username: 'admin',
-        password: 123456
+        password: '123456'
       },
       // 登录页表单验证规则
       loginFormRules: {
@@ -59,7 +59,6 @@ export default {
       this.$refs.loginFormRef.validate(async (result) => {
         if (!result) return
         const { data: res } = await this.$http.post('login', this.loginForm)
-        console.log(res)
         if (res.meta.status !== 200) return this.$Message.error('登录失败')
         this.$Message.success('登录成功')
         /* 将登录成功的token，保存到客户端的sessionStorage中
